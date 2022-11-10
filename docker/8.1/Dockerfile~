@@ -61,10 +61,8 @@ RUN chmod +x /usr/local/bin/start-container
 
 RUN mkdir -p /home/root/.vscode-server/extensions \
         /home/root/.vscode-server-insiders/extensions \
-        /home/root/.vscode-server/data/Machine \
         && chown -R root \
         /home/root/.vscode-server \
-        /home/root/.vscode-server/data/Machine \
         /home/root/.vscode-server-insiders
 
 EXPOSE 8000

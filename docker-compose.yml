@@ -28,6 +28,7 @@ services:
         volumes:
             - '.:/var/www/html'
             - dev-vscode-disk:/root/.vscode-server/extensions
+            - dev-vscode-disk-data-Machine:/root/.vscode-server/data/Machine
             - dev-vscode-disk-insiders:/root/.vscode-server-insiders/extensions
 
         networks:
@@ -126,6 +127,8 @@ volumes:
     sail-meilisearch:
         driver: local
     dev-vscode-disk:
+        driver: local
+    dev-vscode-disk-data-Machine:
         driver: local
     dev-vscode-disk-insiders:
         driver: local
