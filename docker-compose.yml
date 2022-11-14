@@ -27,6 +27,7 @@ services:
             #XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}'
         volumes:
             - '.:/var/www/html'
+            - dev-vscode-disk-bin:/root/.vscode-server/bin
             - dev-vscode-disk:/root/.vscode-server/extensions
             - dev-vscode-disk-data-Machine:/root/.vscode-server/data/Machine
             - dev-vscode-disk-insiders:/root/.vscode-server-insiders/extensions
@@ -127,6 +128,8 @@ volumes:
     sail-meilisearch:
         driver: local
     dev-vscode-disk:
+        driver: local
+    dev-vscode-disk-bin:
         driver: local
     dev-vscode-disk-data-Machine:
         driver: local
